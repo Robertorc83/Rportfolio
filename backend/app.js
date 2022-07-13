@@ -16,6 +16,8 @@ app.use(cors());
 // Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
+
+app.get('/', (req, res) => res.send('It is activated'))
 // Newsletter Route
 app.post('', (req, res) => {
   console.log(req.body);
